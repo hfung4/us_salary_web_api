@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{%block content%}
+
+    <article class="media content-section">
+    <div class="center-screen">
+      <div class="media-body">
+        <h2><a class="article-title" href="#">Your estimated salary is</a> <a class="article-title" href="#">{{ result.predicted_salary }} USD</a></h2>
+        <p class="article-content"  style="text-align:center"> Your personal income is higher than approximately {{ result.percentile }}% of the US population</p>
+        <br><br><br>
+        <p align="center"><a href="/"><button class="button">Go Back</button></a></p>
+      
+      </div>
+    </div>
+    </article>
+{% endblock content %}

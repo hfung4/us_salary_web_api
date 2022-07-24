@@ -3,10 +3,16 @@ from utils.utils import get_percentile
 from utils.predict import predict
 from forms import UserInputForm
 import numpy as np
+from pathlib import Path
+from strictyaml import load
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "4153128e2c86d614f5a58885464b1fde"
+# read secret key
+with open(Path("key", "key.yml"), "r") as key_file:
+    key = load(key_file.read())
+
+app.config["SECRET_KEY"] = key.data["SECRET_KEY"]
 
 
 @app.route("/", methods=["GET", "POST"])

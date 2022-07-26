@@ -14,7 +14,7 @@ Python, Flask, deployed on Heroku
 
 - Use the package as a dependency for a simple web app (built with Flask, html, css
 
-- Deployed web application on Heroku:
+- Deployed web application on Heroku: https://us-salary-predictor-web-api.herokuapp.com/
 
 ## Setup
 

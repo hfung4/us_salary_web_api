@@ -17,7 +17,7 @@ app.config["SECRET_KEY"] = key.data["SECRET_KEY"]
 
 @app.route("/", methods=["GET", "POST"])
 def user_form():
-    form = UserInputForm()  # instantiate UserInputForm
+    form = UserInputForm()
 
     predicted_salary = 0
 
@@ -31,6 +31,10 @@ def user_form():
         education = form.education.data
         gender = form.gender.data
         race = form.race.data
+
+        # TODO: create db with SQLAlchemy;
+        # create "user" row with the above form data
+        # Write data to User table
 
         # Get predictions from ML model
         prediction = predict(
